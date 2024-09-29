@@ -23,6 +23,13 @@
 		9F3590372CA929A400E40EA3 /* PokemonList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3590362CA929A400E40EA3 /* PokemonList.swift */; };
 		9F3590392CA929B200E40EA3 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3590382CA929B200E40EA3 /* Pokemon.swift */; };
 		9F35903B2CA92A1900E40EA3 /* PokemonRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F35903A2CA92A1900E40EA3 /* PokemonRepository.swift */; };
+		9F3590402CA93C8800E40EA3 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F35903F2CA93C8800E40EA3 /* MainViewModel.swift */; };
+		9F3590432CA9755800E40EA3 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3590422CA9755800E40EA3 /* UIColor.swift */; };
+		9F3590452CA975A500E40EA3 /* UIViewController + Reactive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3590442CA975A500E40EA3 /* UIViewController + Reactive.swift */; };
+		9F3590472CA9D77500E40EA3 /* UIImageView + Reactive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3590462CA9D77500E40EA3 /* UIImageView + Reactive.swift */; };
+		9F3590492CA9D97D00E40EA3 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3590482CA9D97D00E40EA3 /* MainView.swift */; };
+		9F35904B2CA9D9BB00E40EA3 /* PokemonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F35904A2CA9D9BB00E40EA3 /* PokemonCell.swift */; };
+		9F35904E2CA9DC5700E40EA3 /* ReusableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F35904D2CA9DC5700E40EA3 /* ReusableCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +47,13 @@
 		9F3590362CA929A400E40EA3 /* PokemonList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonList.swift; sourceTree = "<group>"; };
 		9F3590382CA929B200E40EA3 /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 		9F35903A2CA92A1900E40EA3 /* PokemonRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonRepository.swift; sourceTree = "<group>"; };
+		9F35903F2CA93C8800E40EA3 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		9F3590422CA9755800E40EA3 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		9F3590442CA975A500E40EA3 /* UIViewController + Reactive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Reactive.swift"; sourceTree = "<group>"; };
+		9F3590462CA9D77500E40EA3 /* UIImageView + Reactive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView + Reactive.swift"; sourceTree = "<group>"; };
+		9F3590482CA9D97D00E40EA3 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		9F35904A2CA9D9BB00E40EA3 /* PokemonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonCell.swift; sourceTree = "<group>"; };
+		9F35904D2CA9DC5700E40EA3 /* ReusableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +90,9 @@
 		9F358FE22CA90F4A00E40EA3 /* poke */ = {
 			isa = PBXGroup;
 			children = (
+				9F3590412CA9754E00E40EA3 /* Extension */,
 				9F35900C2CA9217000E40EA3 /* Model */,
+				9F35903C2CA93C6500E40EA3 /* View */,
 				9F358FE32CA90F4A00E40EA3 /* AppDelegate.swift */,
 				9F358FE52CA90F4A00E40EA3 /* SceneDelegate.swift */,
 				9F358FE72CA90F4A00E40EA3 /* ViewController.swift */,
@@ -107,6 +123,35 @@
 				9F3590382CA929B200E40EA3 /* Pokemon.swift */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		9F35903C2CA93C6500E40EA3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9F35903E2CA93C8100E40EA3 /* Main */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9F35903E2CA93C8100E40EA3 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				9F35903F2CA93C8800E40EA3 /* MainViewModel.swift */,
+				9F3590482CA9D97D00E40EA3 /* MainView.swift */,
+				9F35904A2CA9D9BB00E40EA3 /* PokemonCell.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		9F3590412CA9754E00E40EA3 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				9F3590422CA9755800E40EA3 /* UIColor.swift */,
+				9F3590442CA975A500E40EA3 /* UIViewController + Reactive.swift */,
+				9F35904D2CA9DC5700E40EA3 /* ReusableCell.swift */,
+				9F3590462CA9D77500E40EA3 /* UIImageView + Reactive.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,15 +234,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F35900E2CA9217D00E40EA3 /* NetworkManager.swift in Sources */,
+				9F3590432CA9755800E40EA3 /* UIColor.swift in Sources */,
 				9F35903B2CA92A1900E40EA3 /* PokemonRepository.swift in Sources */,
 				9F3590372CA929A400E40EA3 /* PokemonList.swift in Sources */,
 				9F358FE82CA90F4A00E40EA3 /* ViewController.swift in Sources */,
+				9F35904B2CA9D9BB00E40EA3 /* PokemonCell.swift in Sources */,
 				9F3590352CA928EA00E40EA3 /* PokemonDetail.swift in Sources */,
 				9F358FE42CA90F4A00E40EA3 /* AppDelegate.swift in Sources */,
 				9F3590392CA929B200E40EA3 /* Pokemon.swift in Sources */,
 				9F3590332CA928E100E40EA3 /* PokemonType.swift in Sources */,
 				9F3590312CA928D800E40EA3 /* PokemonTypeInfo.swift in Sources */,
 				9F358FE62CA90F4A00E40EA3 /* SceneDelegate.swift in Sources */,
+				9F3590402CA93C8800E40EA3 /* MainViewModel.swift in Sources */,
+				9F3590452CA975A500E40EA3 /* UIViewController + Reactive.swift in Sources */,
+				9F3590492CA9D97D00E40EA3 /* MainView.swift in Sources */,
+				9F3590472CA9D77500E40EA3 /* UIImageView + Reactive.swift in Sources */,
+				9F35904E2CA9DC5700E40EA3 /* ReusableCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
