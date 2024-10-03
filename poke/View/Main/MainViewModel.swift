@@ -38,5 +38,6 @@ extension MainViewModel {
     struct Output {
         let pokemonList: Observable<[Pokemon]>
     }
+    
 }
 
