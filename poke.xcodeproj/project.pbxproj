@@ -30,6 +30,7 @@
 		9F3590492CA9D97D00E40EA3 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3590482CA9D97D00E40EA3 /* MainView.swift */; };
 		9F35904B2CA9D9BB00E40EA3 /* PokemonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F35904A2CA9D9BB00E40EA3 /* PokemonCell.swift */; };
 		9F35904E2CA9DC5700E40EA3 /* ReusableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F35904D2CA9DC5700E40EA3 /* ReusableCell.swift */; };
+		9F3590502CA9EBED00E40EA3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F35904F2CA9EBED00E40EA3 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		9F3590482CA9D97D00E40EA3 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		9F35904A2CA9D9BB00E40EA3 /* PokemonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonCell.swift; sourceTree = "<group>"; };
 		9F35904D2CA9DC5700E40EA3 /* ReusableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableCell.swift; sourceTree = "<group>"; };
+		9F35904F2CA9EBED00E40EA3 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 				9F35903F2CA93C8800E40EA3 /* MainViewModel.swift */,
 				9F3590482CA9D97D00E40EA3 /* MainView.swift */,
 				9F35904A2CA9D9BB00E40EA3 /* PokemonCell.swift */,
+				9F35904F2CA9EBED00E40EA3 /* MainViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 				9F3590402CA93C8800E40EA3 /* MainViewModel.swift in Sources */,
 				9F3590452CA975A500E40EA3 /* UIViewController + Reactive.swift in Sources */,
 				9F3590492CA9D97D00E40EA3 /* MainView.swift in Sources */,
+				9F3590502CA9EBED00E40EA3 /* MainViewController.swift in Sources */,
 				9F3590472CA9D77500E40EA3 /* UIImageView + Reactive.swift in Sources */,
 				9F35904E2CA9DC5700E40EA3 /* ReusableCell.swift in Sources */,
 			);
