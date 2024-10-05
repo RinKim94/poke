@@ -44,7 +44,12 @@ class MainViewController: UIViewController {
             .disposed(by: disposeBag)
         
             
-        
+        mainView.collectionView.rx.modelSelected(Pokemon.self)
+            .withUnretained(self)
+            .subscribe(onNext: { owner, pokemon in
+                print(pokemon.id)
+            })
+            .disposed(by: disposeBag)
     }
     
     
