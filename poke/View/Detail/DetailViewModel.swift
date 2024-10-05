@@ -10,7 +10,6 @@ import RxSwift
 
 class DetailViewModel {
     private let respository = PokemonRepository()
-    private let disposeBag = DisposeBag()
     private let pokemonId: Int
     
     init(pokemonId: Int) {
@@ -25,10 +24,9 @@ class DetailViewModel {
                     .fetchPokemonDetail(pokemonId: owner.pokemonId)
             }
             .asObservable()
+        
         return .init(pokemonDetail: pokemonDetail)
     }
-    
-    
 
 }
 
