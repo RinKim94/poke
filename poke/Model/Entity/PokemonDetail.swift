@@ -13,4 +13,5 @@ class PokemonDetail: Decodable {
     let height: Int
     let weight: Int
     let types: [PokemonType]
+    let sprites: Sprites
 }
