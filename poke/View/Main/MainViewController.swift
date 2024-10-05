@@ -25,12 +25,15 @@ class MainViewController: UIViewController {
     
     private func setup() {
         view = mainView
-        navigationController?.isNavigationBarHidden = true
+        
     }
     
     func bind() {
         
         let load = self.rx.viewWillAppear
+            .do(onNext: { [weak self] _ in
+                self?.navigationController?.isNavigationBarHidden = true
+            })
         
         let input = MainViewModel.Input(load: load)
         
@@ -47,7 +50,10 @@ class MainViewController: UIViewController {
         mainView.collectionView.rx.modelSelected(Pokemon.self)
             .withUnretained(self)
             .subscribe(onNext: { owner, pokemon in
-                print(pokemon.id)
+                let detailVM = DetailViewModel(pokemonId: pokemon.id)
+                let detailVC = DetailViewController(viewModel: detailVM)
+                
+                owner.navigationController?.pushViewController(detailVC, animated: true)
             })
             .disposed(by: disposeBag)
     }
