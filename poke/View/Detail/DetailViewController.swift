@@ -72,12 +72,14 @@ class DetailViewController: UIViewController {
         detail
             .map { $0.sprites.frontDefault }
             .compactMap { URL(string: $0) } //nil 일경우 걸러짐
-            .withUnretained(self)
-            .flatMapLatest { owner, url in
-                owner.detailView.imageView.rx.loadImage(url: url)
-            }
-            .observe(on: MainScheduler.instance)
-            .bind(to: detailView.imageView.rx.image)
+//            .withUnretained(self)
+//            .flatMapLatest { owner, url in
+//                owner.detailView.imageView.rx.loadImage(url: url)
+//            }
+//            .observe(on: MainScheduler.instance)
+//            .bind(to: detailView.imageView.rx.image)
+            .bind { [weak self] url in
+                self?.detailView.imageView.kf.setImage(with: url, placeholder: UIImage(named: "placeholder"))}
             .disposed(by: disposeBag)
     }
     

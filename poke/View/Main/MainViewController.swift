@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 import RxSwift
 
+
 class MainViewController: UIViewController {
     
     private let mainView = MainView()
@@ -34,8 +35,15 @@ class MainViewController: UIViewController {
             .do(onNext: { [weak self] _ in
                 self?.navigationController?.isNavigationBarHidden = true
             })
+        let loadMoreTrigger = mainView.collectionView.rx.contentOffset
+            .withUnretained(self)
+            .flatMap { owner, contentOffset in
+                owner.isNearBottomEdge(contentOffset: contentOffset)
+                ? Observable.just(()) : Observable.empty()
+                
+            }
         
-        let input = MainViewModel.Input(load: load)
+        let input = MainViewModel.Input(load: load, loadMore: loadMoreTrigger)
         
         let output = viewModel.transform(input)
         
@@ -55,6 +63,11 @@ class MainViewController: UIViewController {
                 owner.navigationController?.pushViewController(detailVC, animated: true)
             })
             .disposed(by: disposeBag)
+    }
+    
+    
+    private func isNearBottomEdge(contentOffset: CGPoint) -> Bool {
+        contentOffset.y + mainView.collectionView.frame.size.height > mainView.collectionView.contentSize.height
     }
     
     
